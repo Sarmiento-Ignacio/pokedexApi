@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-// import { IonLabel, IonCardSubtitle, IonCard, IonCardHeader, IonCardTitle, IonChip, IonCardContent, IonAvatar, IonBackButton, IonButtons, IonContent, IonHeader, IonTitle, IonToolbar, IonItem } from '@ionic/angular/standalone';
 import { ActivatedRoute } from '@angular/router';
 import { PokemonService } from '../service/pokemon.service';
 import { IonicSlides } from '@ionic/angular/standalone';
@@ -27,17 +26,7 @@ export class DetailsPage implements OnInit {
   swiperModules = [IonicSlides];
   @Input() pokemon: any;
 
-  
-  
-
   details: any;
-
-  // slideOpts = {
-  //   autoplay: {
-  //     delay: 1000,
-  //     disableOnInteraction: false
-  //   }
-  // };
 
   constructor(private route: ActivatedRoute, private pokeService: PokemonService) { }
 
@@ -47,10 +36,6 @@ export class DetailsPage implements OnInit {
       console.log('Details: ', details);
       this.details = details; 
 
-      
     })
   }
-
-  
-
 }
