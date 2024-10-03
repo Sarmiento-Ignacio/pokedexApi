@@ -9,8 +9,7 @@
 
 <ion-content >
   <div *ngIf="details">
-    
-    <swiper-container pager="true" [options]="slideOpts">
+    <swiper-container [modules]="swiperModules" [options]="{ slidesPerView: 3, loop: true }" [slidesPerView]="1" [loop]="true" effect="flip" >
       <swiper-slide *ngFor="let sprite of details.images">
         <img [src]="sprite" style="height: 250px;">
       </swiper-slide>
